@@ -11,20 +11,31 @@
 
     <title>Climate Physics</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module">
         import PhotoSwipeLightbox from '/static/css/photoswipe/photoswipe-lightbox.esm.js';
+        import PhotoSwipeDynamicCaption from 'https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
 
         const lightbox = new PhotoSwipeLightbox({
-        // may select multiple "galleries"
-        gallery: '#gallery--getting-started',
-
-        // Elements within gallery (slides)
-        children: 'a',
-
-        // setup PhotoSwipe Core dynamic import
-        pswpModule: () => import('/static/css/photoswipe/photoswipe.esm.js')
+            gallery: '#gallery--getting-started',
+            children: 'a',
+            pswpModule: () => import('/static/css/photoswipe/photoswipe.esm.js')
         });
         lightbox.init();
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.innerText = 'open second image';
+        document.querySelector('#gallery--with-button').after(btn);
+
+        btn.onclick = () => {
+            lightbox.loadAndOpen(1, {
+                gallery: document.querySelector('#gallery--with-button')
+            });
+
+            // You also can just trigger the native click
+            // document.querySelector('#gallery--with-button a:nth-of-type(2)').click();
+        };
     </script>
 </head>
 
@@ -36,7 +47,7 @@
         </div>
     </header>
 
-    <section id="introduction" class="container">
+    <!-- <section id="introduction" class="container">
         <h2>Introduction</h2>
         <p>Climate physics is the study of the physical processes that drive the Earth's climate. It encompasses the
             investigation of the atmosphere, oceans, ice, and land, and how these elements interact to produce the
@@ -57,7 +68,7 @@
         <p>Climate change refers to significant changes in global temperatures and weather patterns over time. While
             climate change is a natural phenomenon, recent changes are largely attributed to human activities, such as
             burning fossil fuels, deforestation, and industrial processes.</p>
-    </section>
+    </section> -->
 
     <div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
         <a href="/static/artwork/20240818_svantearrhenius.jpeg" 
