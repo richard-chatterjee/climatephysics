@@ -14,28 +14,15 @@
     <link rel="stylesheet" href="https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module">
-        import PhotoSwipeLightbox from '/static/css/photoswipe/photoswipe-lightbox.esm.js';
+        import PhotoSwipeLightbox from '/static/css/photoswipe/photoswipe-lightbox.esm.min.js';
         import PhotoSwipeDynamicCaption from 'https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
 
         const lightbox = new PhotoSwipeLightbox({
             gallery: '#gallery--getting-started',
             children: 'a',
-            pswpModule: () => import('/static/css/photoswipe/photoswipe.esm.js')
+            pswpModule: () => import('/static/css/photoswipe/photoswipe.esm.min.js')
         });
         lightbox.init();
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.innerText = 'open second image';
-        document.querySelector('#gallery--with-button').after(btn);
-
-        btn.onclick = () => {
-            lightbox.loadAndOpen(1, {
-                gallery: document.querySelector('#gallery--with-button')
-            });
-
-            // You also can just trigger the native click
-            // document.querySelector('#gallery--with-button a:nth-of-type(2)').click();
-        };
     </script>
 </head>
 
