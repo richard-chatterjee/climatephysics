@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module">
-        import PhotoSwipeLightbox from '/static/js/photoswipe/photoswipe-lightbox.esm.min.js';
+        import PhotoSwipeLightbox from '/static/js/lib/photoswipe/photoswipe-lightbox.esm.min.js';
         import PhotoSwipeDynamicCaption from 'https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
 
         const lightbox = new PhotoSwipeLightbox({
             gallery: '#gallery--getting-started',
             children: 'a',
-            pswpModule: () => import('/static/js/photoswipe/photoswipe.esm.min.js')
+            pswpModule: () => import('/static/js/lib/photoswipe/photoswipe.esm.min.js')
         });
         lightbox.init();
     </script>
@@ -56,26 +56,27 @@
             climate change is a natural phenomenon, recent changes are largely attributed to human activities, such as
             burning fossil fuels, deforestation, and industrial processes.</p>
     </section> -->
-
-    <div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
-        <a href="/static/artwork/20240818_svantearrhenius.jpeg" 
+    <div style="display:flex;justify-content:center;">
+        <div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
+            <a href="/static/artwork/20240818_svantearrhenius.jpeg" 
+                data-pswp-width="1280" 
+                data-pswp-height="1600" 
+                target="_blank">
+                <img src="/static/artwork/20240818_svantearrhenius.jpeg" alt="" />
+            </a>
+            <a href="/static/artwork/20240818_eunicenewtonfoote.jpeg" 
+                data-pswp-width="1280" 
+                data-pswp-height="1600" 
+                target="_blank">
+            <img src="/static/artwork/20240818_eunicenewtonfoote.jpeg" alt="" />
+            </a>
+            <a href="/static/artwork/20240818_happyearthday.jpeg" 
             data-pswp-width="1280" 
             data-pswp-height="1600" 
             target="_blank">
-            <img src="/static/artwork/20240818_svantearrhenius.jpeg" alt="" />
-        </a>
-        <a href="/static/artwork/20240818_eunicenewtonfoote.jpeg" 
-            data-pswp-width="1280" 
-            data-pswp-height="1600" 
-            target="_blank">
-          <img src="/static/artwork/20240818_eunicenewtonfoote.jpeg" alt="" />
-        </a>
-        <a href="/static/artwork/20240818_happyearthday.jpeg" 
-          data-pswp-width="1280" 
-          data-pswp-height="1600" 
-          target="_blank">
-          <img src="/static/artwork/20240818_happyearthday.jpeg" alt="" />
-        </a>
+            <img src="/static/artwork/20240818_happyearthday.jpeg" alt="" />
+            </a>
+        </div>
     </div>
 
     <footer>
