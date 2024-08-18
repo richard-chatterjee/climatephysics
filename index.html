@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module">
-        import PhotoSwipeLightbox from '/static/css/photoswipe/photoswipe-lightbox.esm.min.js';
+        import PhotoSwipeLightbox from '/static/js/photoswipe/photoswipe-lightbox.esm.min.js';
         import PhotoSwipeDynamicCaption from 'https://unpkg.com/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
 
         const lightbox = new PhotoSwipeLightbox({
             gallery: '#gallery--getting-started',
             children: 'a',
-            pswpModule: () => import('/static/css/photoswipe/photoswipe.esm.min.js')
+            pswpModule: () => import('/static/js/photoswipe/photoswipe.esm.min.js')
         });
         lightbox.init();
     </script>
@@ -29,7 +29,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>Climate Physics</h1>
+            <h1>Climate Physics ALPHA TESTING</h1>
             <p>Understanding the Science Behind Our Changing Climate</p>
         </div>
     </header>
