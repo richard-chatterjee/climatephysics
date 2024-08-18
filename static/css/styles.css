@@ -1,0 +1,70 @@
+/* Reset some basic elements */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #2f80ed;
+    background-color: #f4f4f4;
+    color: #333;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1em;
+}

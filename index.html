@@ -1,1 +1,85 @@
-#testing
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Physics</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script type="module">
+        import PhotoSwipeLightbox from '/static/css/photoswipe/photoswipe-lightbox.esm.js';
+
+        const lightbox = new PhotoSwipeLightbox({
+        // may select multiple "galleries"
+        gallery: '#gallery--getting-started',
+
+        // Elements within gallery (slides)
+        children: 'a',
+
+        // setup PhotoSwipe Core dynamic import
+        pswpModule: () => import('/static/css/photoswipe/photoswipe.esm.js')
+        });
+        lightbox.init();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Climate Physics</h1>
+            <p>Understanding the Science Behind Our Changing Climate</p>
+        </div>
+    </header>
+
+    <section id="introduction" class="container">
+        <h2>Introduction</h2>
+        <p>Climate physics is the study of the physical processes that drive the Earth's climate. It encompasses the
+            investigation of the atmosphere, oceans, ice, and land, and how these elements interact to produce the
+            weather and climate patterns we observe.</p>
+    </section>
+
+    <section id="greenhouse-effect" class="container">
+        <h2>The Greenhouse Effect</h2>
+        <img src="greenhouse_effect.jpg" alt="Illustration of the Greenhouse Effect">
+        <p>The greenhouse effect is a natural process that warms the Earth's surface. When the Sun's energy reaches the
+            Earth, some of it is reflected back to space and the rest is absorbed and re-radiated by greenhouse gases.
+            This process keeps our planet's temperature at a level necessary for life.</p>
+    </section>
+
+    <section id="climate-change" class="container">
+        <h2>Climate Change</h2>
+        <img src="climate_change.jpg" alt="Illustration of Climate Change">
+        <p>Climate change refers to significant changes in global temperatures and weather patterns over time. While
+            climate change is a natural phenomenon, recent changes are largely attributed to human activities, such as
+            burning fossil fuels, deforestation, and industrial processes.</p>
+    </section>
+
+    <div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
+        <a href="/static/artwork/20240818_svantearrhenius.jpeg" 
+            data-pswp-width="1280" 
+            data-pswp-height="1600" 
+            target="_blank">
+            <img src="/static/artwork/20240818_svantearrhenius.jpeg" alt="" />
+        </a>
+        <a href="/static/artwork/20240818_eunicenewtonfoote.jpeg" 
+            data-pswp-width="1280" 
+            data-pswp-height="1600" 
+            target="_blank">
+          <img src="/static/artwork/20240818_eunicenewtonfoote.jpeg" alt="" />
+        </a>
+        <a href="/static/artwork/20240818_happyearthday.jpeg" 
+          data-pswp-width="1280" 
+          data-pswp-height="1600" 
+          target="_blank">
+          <img src="/static/artwork/20240818_happyearthday.jpeg" alt="" />
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Climate Physics. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
